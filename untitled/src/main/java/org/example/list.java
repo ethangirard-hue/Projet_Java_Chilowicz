@@ -1,16 +1,21 @@
 package org.example;
 
 public class list {
-    public String element;
+    public String ListName;
+    public String element=null;
     private Integer LengthList=0;
 
-    list(String element){
-        this.element=element;
+    list(String listName){
+        this.ListName=listName;
     }
 
-    public  String add(list my_list , String NewElement){
-        LengthList++;
-        return element+NewElement;
+    public String[] empty_list(String NewName){
+        return new String[0];
+    }
+
+    public  String append(list my_list , String[] NewElement){
+        LengthList=LengthList+NewElement.length;
+        return element;
     }
 
     public Integer len(list my_list){
